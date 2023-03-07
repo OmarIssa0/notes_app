@@ -59,7 +59,9 @@ class NotesItem extends StatelessWidget {
                   color: Colors.black,
                   size: 24,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  note.delete();
+                },
               ),
             ),
             Padding(
