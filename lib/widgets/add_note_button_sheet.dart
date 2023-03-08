@@ -9,8 +9,6 @@ import 'add_note_form.dart';
 class AddNotesButtonSheet extends StatelessWidget {
   const AddNotesButtonSheet({super.key});
 
-  // bool isLoading = false;
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
