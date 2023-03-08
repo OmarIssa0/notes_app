@@ -3,5 +3,6 @@
         "Autovalidate",
         "dete",
         "Issa"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

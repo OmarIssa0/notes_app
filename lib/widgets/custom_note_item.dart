@@ -19,7 +19,9 @@ class NotesItem extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return const EditNoteView();
+              return EditNoteView(
+                note: note,
+              );
             },
           ),
         );
@@ -56,15 +58,16 @@ class NotesItem extends StatelessWidget {
                 ),
               ),
               trailing: IconButton(
+                onPressed: () {
+                  note.delete();
+
+                  BlocProvider.of<NotesCubit>(context).fetchAllNotes();
+                },
                 icon: const Icon(
                   FontAwesomeIcons.trash,
                   color: Colors.black,
                   size: 24,
                 ),
-                onPressed: () {
-                  note.delete();
-                  BlocProvider.of<NotesCubit>(context).fatchAllNotes();
-                },
               ),
             ),
             Padding(
